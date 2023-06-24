@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane fx:id="grid" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+  <columnConstraints>
+      <ColumnConstraints hgrow="NEVER" minWidth="10.0" prefWidth="50.0" />
+    <ColumnConstraints hgrow="NEVER" minWidth="10.0" prefWidth="110.0" />
+    <ColumnConstraints hgrow="NEVER" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="NEVER" minWidth="10.0" prefWidth="90.0" />
+      <ColumnConstraints hgrow="NEVER" minWidth="20.0" prefWidth="20.0" />
+      <ColumnConstraints hgrow="NEVER" minWidth="70.0" prefWidth="70.0" />
+      <ColumnConstraints hgrow="NEVER" minWidth="10.0" prefWidth="90.0" />
+      <ColumnConstraints hgrow="NEVER" minWidth="10.0" prefWidth="50.0" />
+  </columnConstraints>
+  <rowConstraints>
+      <RowConstraints minHeight="30.0" prefHeight="60.0" vgrow="NEVER" />
+      <RowConstraints minHeight="30.0" prefHeight="60.0" vgrow="NEVER" />
+      <RowConstraints prefHeight="40.0" vgrow="NEVER" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="30.0" prefHeight="60.0" vgrow="NEVER" />
+      <RowConstraints minHeight="30.0" prefHeight="60.0" vgrow="NEVER" />
+  </rowConstraints>
+   <children>
+      <Label alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="150.0" text="Profit :" textFill="#ffffff" GridPane.columnIndex="1" GridPane.hgrow="NEVER" GridPane.rowSpan="2" GridPane.vgrow="NEVER">
+         <font>
+            <Font size="28.0" />
+         </font></Label>
+      <Button fx:id="pur" alignment="CENTER" maxHeight="80.0" maxWidth="80.0" minHeight="80.0" minWidth="80.0" mnemonicParsing="false" onAction="#purchase" prefHeight="80.0" prefWidth="80.0" GridPane.columnIndex="8" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="9" GridPane.rowSpan="2" GridPane.valignment="CENTER" />
+      <ScrollPane fx:id="ss" hbarPolicy="NEVER" vbarPolicy="ALWAYS" GridPane.columnIndex="1" GridPane.columnSpan="9" GridPane.rowIndex="3" GridPane.rowSpan="6">
+         <content>
+            <Pane fx:id="mPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="576.0" />
+         </content>
+      </ScrollPane>
+      <Label fx:id="totalP" layoutX="10.0" layoutY="10.0" prefHeight="76.0" prefWidth="150.0" text=" 0.0" textFill="WHITE" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="9" GridPane.rowSpan="2">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Label>
+      <Button fx:id="addIc" alignment="CENTER" layoutX="535.0" layoutY="22.0" maxHeight="60.0" maxWidth="60.0" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onAction="#add1" prefHeight="60.0" prefWidth="60.0" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.hgrow="NEVER" GridPane.rowSpan="2" GridPane.valignment="CENTER" GridPane.vgrow="NEVER" />
+      <Button fx:id="reportIc" alignment="CENTER" layoutX="535.0" layoutY="71.0" minHeight="30.0" mnemonicParsing="false" onAction="#report" prefHeight="30.0" prefWidth="90.0" text="Report" GridPane.columnIndex="7" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.hgrow="NEVER" GridPane.valignment="BOTTOM" GridPane.vgrow="NEVER">
+         <font>
+            <Font name="Segoe UI" size="16.0" />
+         </font></Button>
+      <Pane fx:id="sortPane" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.columnSpan="9" GridPane.rowIndex="2" />
+      <Label alignment="CENTER_RIGHT" layoutX="85.0" layoutY="328.0" prefHeight="76.0" prefWidth="150.0" text="Price :" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="9" GridPane.rowSpan="2">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Label>
+      <Label fx:id="profitP" layoutX="102.0" layoutY="328.0" prefHeight="76.0" prefWidth="150.0" text=" 0.0" textFill="#ffffff" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowSpan="2">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Label>
+      <Button fx:id="saveIc" alignment="CENTER" depthTest="ENABLE" layoutX="460.0" layoutY="68.0" maxHeight="60.0" maxWidth="60.0" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onAction="#save" prefHeight="60.0" prefWidth="60.0" GridPane.columnIndex="9" GridPane.halignment="CENTER" GridPane.hgrow="NEVER" GridPane.rowSpan="2" GridPane.valignment="CENTER" GridPane.vgrow="NEVER" />
+      <Button fx:id="clearIc" alignment="CENTER" contentDisplay="CENTER" layoutX="528.0" layoutY="59.0" minHeight="30.0" mnemonicParsing="false" onAction="#clear" prefHeight="30.0" prefWidth="90.0" text="Clear" GridPane.columnIndex="7" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.hgrow="NEVER" GridPane.rowIndex="1" GridPane.valignment="TOP" GridPane.vgrow="NEVER">
+         <font>
+            <Font name="Segoe UI" size="16.0" />
+         </font></Button>
+   </children>
+
+</GridPane>
